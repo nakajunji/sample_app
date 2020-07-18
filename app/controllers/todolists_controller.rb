@@ -1,7 +1,7 @@
 class TodolistsController < ApplicationController
 
   def new
-  	@List= List.new
+  	@List = List.new
   end
 
   def create
@@ -23,6 +23,9 @@ class TodolistsController < ApplicationController
   end
 
   def update
+    list = List.find(params[:id])
+    list.update(list_params)
+    redirect_to todolist_path(list.id)
   end
 
 
