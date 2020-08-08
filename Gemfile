@@ -66,3 +66,4 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 # 画像加工用
 gem "refile-mini_magick"
 
+gem 'dotenv-rails'
